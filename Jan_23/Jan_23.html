@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+	<!-- <script src="main.js"></script> -->
+</head>
+<body>
+	<form>
+
+		<input type="radio" name="gender" checked>
+		Male
+		<input type="radio" name="gender" checked> Female
+		<input type="text" minlength="10" min="10" max="15" maxlength="10" placeholder="Name" required>
+		<input type="number" step="0.0000001" min="10" max="20" maxlength="10" pattern="^[0-9]{10}$">
+		<input type="email">
+		<input type="password">
+		<input type="radio" name="gender"> Other
+
+		<input type="checkbox"> Accept aggrement
+
+		<select id="sel" name="country" value="" multiple>
+			<option value="" disabled selected>Select country</option>
+			<option value="india">India</option>
+			<option value="uk">UK</option>
+			<option value="us">US</option>
+		</select>
+
+		<input type="color">
+		<input type="font">
+		<input type="search">
+		<button>Submit</button>
+		<button type="button">Cancel</button>
+		<button type="reset">Reset</button>
+	</form>
+	<ol type="A">
+		<li>hhgc</li>
+		<li>hhgc</li>
+		<li>hhgc</li>
+		<li>hhgc</li>
+		<li>hhgc</li>
+		<li>hhgc</li>
+	</ol>
+	<ul>
+		<li>hhgc</li>
+		<li>hhgc</li>
+		<li>
+			<ol>
+				<li>shcvx</li>
+				<li>shcvx</li>
+				<li>shcvx</li>
+					<li>shcvx</li>
+			</ol>
+		</li>
+		<li>hhgc</li>
+		<li>hhgc</li>
+		<li>hhgc</li>
+	</ul>
+	<script>
+		setTimeout(() => {
+			var sel = document.getElementsByTagName('select');
+			console.log(sel);
+		}, 5000);
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><!-- 
+	<audio id="song" controls="true" controlsList="nodownload">
+		<source src="https://share33.com/track/The%20Chainsmokers%20-%20Sick%20Boy%20-%20(www.SongsLover.club).mp3" type="audio/mp3">
+		Error
+	</audio> -->
+	<video id="video" controls="true" controlsList="nodownload" width="400px">
+		<source src="http://jell.yfish.us/media/jellyfish-250-mbps-4k-uhd-h264.mkv" type="video/mp4">
+		Error
+	</video>
+	<script type="text/javascript">
+		// var song = document.getElementById('song');
+		var video = document.getElementById('video');
+		setInterval(()=>{
+			// var buffer = song.buffered;
+			var b1 = video.buffered;
+			// console.log(buffer.length, buffer.start(0), buffer.end(0), song.duration)
+			console.log(b1.start(0), b1.end(0), b1.duration)
+		}, 1000)
+	</script>
+</body>
+</html>

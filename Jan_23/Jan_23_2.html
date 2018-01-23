@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <!-- internal css -->
+    <style>
+        /* tag name selector */
+        p{
+            color: blue;
+        }
+        p.mypara, div.mypara{
+            color: blue !important;
+        }
+        .newclass{
+            font-size: 30px;
+        }
+        #div1{
+            color: green !important;
+        }
+        div.testDiv p{
+            font-size: 32px;
+            color: orange !important;
+        }
+        #innerDiv p{
+            color: black !important;
+        }
+        #innerDiv + p{
+            font-weight: bold;
+        }
+        [href]{
+            text-decoration: none;
+        }
+        [href="#"]{
+            color: pink
+        }
+        [href='link']:hover{
+            color: green;
+        }
+        div p:last-child{
+            background-color: blue !important;
+        }
+        div p:nth-child(even):hover{
+            color: pink !important
+        }
+    </style>
+    <!-- External css -->
+    <link rel="stylesheet" href="./styles.css">
+<body>
+    <!-- Inline style -->
+    <p style="color:red !important; font-weight:bold;">My paragraph</p>
+    <p>My paragraph</p>
+    <p>My paragraph</p>
+    <p class="mypara">My paragraph</p>
+    <div class="mypara newclass">My div</div>
+    <div class="mypara newclass">My div</div>
+    <div id="div1" class="mypara newclass">My div</div>
+    <div class="mypara newclass">My div</div>
+    <div class="mypara newclass">My div</div>
+    <div class="mypara newclass">My div</div>
+    <div class="mypara newclass">My div</div>
+    <div class="testDiv">
+        <p>Para 1</p>
+        <p>Para</p>
+        <p>Para</p>
+        <p>Para</p>
+        <div id="innerDiv">
+            <p>Inner para 1</p>
+            <p>Inner para</p>
+            <p>Inner para</p>
+        </div>
+        <p>Immediately after div</p>
+    </div>
+    <p>Immediately after outer div</p>
+    <p>After p</p>
+    <a href="">Blank</a>
+    <a href="#">this is #</a>
+    <a href="google.com">Google</a>
+    <a href="link">Link</a>
+</body>
+</html>
