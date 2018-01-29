@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        title{
+            background-color: blue;
+        }
+        html{
+            font-size: 15px;
+        }
+        p{
+            font-weight: bold;
+            color:rgba(255, 120, 120, .5);
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 20px;
+            padding: 1em;
+            margin: 1rem;
+        }
+        a{
+            text-align: right;
+            display: block;
+            width: 70%;
+        }
+        .fab{
+            border: 1px solid grey;
+            background-color: #eee;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        .form{
+            margin: 5px 0;
+        }
+        input{
+            border: 1px solid grey;
+            border-radius: 2px;
+            text-align: right;  
+            padding: 5px 10px;
+        }
+        input:focus{
+            outline:red auto 5px;
+        }
+        .inline{
+            display: inline
+        }
+    </style>
+</head>
+<body>
+    <span class="fab">
+        <span id="hello">hello</span>
+    </span>
+    <p>This is a paragraaph</p>
+    <a href="#">This is my link</a>
+    <span>Home</span>
+    <span>Home</span>
+    <form>
+        <div class="form">
+            <label for="name">Name: </label>
+            <input type="text" id="name">            
+        </div>
+        <div class="form">
+            <label for="email">Email</label><input type="email" id="email">
+        </div>
+    </form>
+
+    <p class="inline">Para 1</p>
+    <p class="inline">para 2</p>
+
+
+
+    <script>
+        var span = document.getElementById('hello');
+        console.log(span.width)
+    </script>
+</body>
+</html>

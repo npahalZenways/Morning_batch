@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <style>
+        /* p{
+            color: blue;
+        }
+        @media screen and (min-width: 400px) and (max-width: 700px){
+            p{
+                color: green;
+            }
+        } */
+        .table-hover tbody tr:hover{
+            background-color: aqua !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-md col-sm-6 bg-danger text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo pariatur impedit a, tempore voluptas illum totam maiores ipsum incidunt ipsa eum laudantium odio eos molestias, distinctio corporis nemo eius? Velit.</div>
+            
+        </div>
+    </div>
+
+    <span class="btn btn-primary">Click</span>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Nitin
+                </td>
+                <td>
+                    98765r
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nitin
+                </td>
+                <td>
+                    98765r
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nitin
+                </td>
+                <td>
+                    98765r
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">My card</div>                
+                <img class="card-img-top" src="https://pmcvariety.files.wordpress.com/2014/03/xbox-logo1.jpg?w=994&h=560&crop=1">
+                <div class="card-body">
+                    <p>dshgcnvb </p>
+                </div>
+                <div class="card-footer"><button class="btn btn-success">Submit</button></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" id="mybtn" data-toggle="dropdown">List</button>
+                <div class="dropdown-menu" >
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Open modal</button>
+        </div>
+    </div>
+    <script src="./jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    
+
+    <!-- modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    My modal
+                </div>
+
+                <div class="modal-body">
+                    <p>My modal body</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">Close modal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#myModal').modal({
+            'backdrop': 'static',
+            'focus': true,
+            'keyboard': true,
+            'show': false
+        });
+    </script>
+</body>
+</html>
