@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script src="../Jan_29/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+    <p id="para">
+        This is my paragraph
+    </p>
+    <button onclick="change()">Change</button>
+    <!-- <video src="rtsp://114.79.156.119:554/user=ANG&password=123456&channel=1&stream=1.sdp" controls></video>     -->
+    <script src="Jan_30.js"></script>
+    <script src="Jan_30_2.js"></script>
+    <script>
+        var para = document.getElementById('para');
+        function change(){
+            let inner = para.innerHTML
+            para.innerHTML = inner + "<span>This is a span inside para</span>"
+        }
+
+        // para.addEventListener('mouseenter', function(event) {
+        //     console.log('mouse enter called')
+        //     para.style.color = 'red';
+        //     para.innerHTML = 'This is changed';
+        // })
+        // para.addEventListener('mouseleave', function (event) {
+        //     console.log('mouse leave called')
+        //     para.style.color = 'black';
+        //     para.innerHTML = 'This is my paragraph';            
+        // })
+        $('#para').hover(function() {
+            $('#para').css({
+                'color': 'blue'
+            })
+        }, function () {
+            $('#para').css('color', 'black')
+        })
+        // $('#para').mouseleave()
+    </script>
+</body>
+</html>
