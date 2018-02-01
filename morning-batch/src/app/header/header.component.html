@@ -1,0 +1,27 @@
+<!-- One-way binding -->
+  <!-- Interpolation
+    ** Data direction is from component to view
+  -->
+  <!-- {{title?title:'Title doesn\'t exist'}} -->
+  {{title}}
+
+  <!-- Event binding
+    ** Data direction is from view to component
+  -->
+  <button [class]="btn2" (click)="title = 'app'; redClass='red'; btn2 = 'btn btn-primary'">Click</button>
+  <button [class]="btn2" (click)="buttons.push('btn5')">Dynamic</button>
+
+  <!-- End of event-binding -->
+
+  <!-- Property binding
+    **Data direction is from component to view
+  -->
+  <p [class]="redClass">this is a para</p>
+  <button style="color: red">My style</button>
+  
+  <!-- End of property binding -->
+<!-- End of One-way binding -->
+  <input type="password" [(ngModel)]="password">
+  <button (click)="showPassword()"></button>
+<!-- Two-way-binding -->
+<!-- End of Two-way-binding -->
