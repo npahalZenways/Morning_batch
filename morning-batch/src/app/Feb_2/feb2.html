@@ -1,0 +1,62 @@
+<!-- Local template variable -->
+<div class="row">
+    <div class="col-md-6">
+        <input type="text" [disabled]="input" placeholder="Enter name" (keypress)="getValue(myInput)" #myInput class="form-control">{{input}}
+    </div>
+    <div class="col-md-6">
+        <button class="btn" (click)="input? input=false : input = true">Click</button>
+    </div> 
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-6">
+        <input type="text" [(ngModel)]="input">{{input}} -->
+        <!-- <input type="text" [ngModel]="input" (ngModelChange)="getValue($event)">{{input}} -->
+    <!-- </div>
+</div> -->
+
+<!-- In-built directives -->
+<!-- *ngIf -->
+<div *ngIf="input; else elseBlock">
+    <p>This is true</p>
+</div>
+<ng-template #elseBlock>
+    <div>
+        <p>This is false</p>
+    </div>
+</ng-template>
+
+<input type="text" [(ngModel)]="switchCondition">
+
+<!-- [ngSwitch] -->
+<div [ngSwitch]="switchCondition">
+    <p *ngSwitchCase="'app'">This is app</p>
+    <p *ngSwitchCase="'my app'">This is my app</p>
+    <p *ngSwitchDefault>Condition is not matching</p>
+</div>
+
+<!-- *ngFor -->
+<!-- <p *ngFor="let element of myArray">{{element}}</p> -->
+<!-- 
+<div *ngFor="let name of myArray">
+    <p>{{name}}</p>
+</div> -->
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Marks</th>
+    </tr>
+    <tr *ngFor="let student of myArray; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.marks?student.marks:'Absent'}}</td>
+    </tr>
+</table>
+
+<!-- [ngClass]="{ 'className': condition }" -->
+
+<p [ngClass]="{'red':switchCondition == 'app', 'blue': switchCondition == 'myapp', 'default': !switchCondition, 'active': switchCondition}">Ng Class test paragraph</p>
+
+<p><span ngNonBindable>{{ switchCondition }}</span> - this is how we interpolate a property</p>
