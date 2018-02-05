@@ -3,7 +3,7 @@ import { Component, ViewChild } from "@angular/core";
 @Component({
     selector: 'feb2',
     templateUrl: './feb2.html',
-    styles: ['.red{ color: red }', '.blue{ color: blue }', '.default{ color: orange }', '.active{ font-weight: bold }']
+    styleUrls: ['./feb2.css']
 })
 export class feb2Component{
     input: boolean = false;
@@ -21,8 +21,14 @@ export class feb2Component{
             name:"Sahil"
     }]
     @ViewChild('myInput') newInput;
-    getValue(){
+    getValue(input){
         // this.input = input;
         console.log(this.newInput);
+    }
+    receiveOutput(e) {
+        console.log(e, 'from feb 2');
+    }
+    receiveOutput1(e) {
+        console.log(e, 'from feb 2');
     }
 }

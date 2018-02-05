@@ -12,10 +12,18 @@ export class HeaderComponent implements OnInit {
   myStyle = "'color: white; background-color: blue'"
   buttons = ['btn1'];
   password;
+  nameInHeader;
   constructor() { }
 
   showPassword(){
     console.log(this.password)
+  }
+
+  receiveOutput(e){
+    console.log(e);
+  }
+  receiveOutput1(e){
+    console.log(e, 'from 1')
   }
   ngOnInit() {
   }

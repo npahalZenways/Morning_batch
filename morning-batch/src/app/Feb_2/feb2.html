@@ -1,3 +1,5 @@
+<p>Feb 2 starting</p>
+
 <!-- Local template variable -->
 <div class="row">
     <div class="col-md-6">
@@ -59,4 +61,9 @@
 
 <p [ngClass]="{'red':switchCondition == 'app', 'blue': switchCondition == 'myapp', 'default': !switchCondition, 'active': switchCondition}">Ng Class test paragraph</p>
 
-<p><span ngNonBindable>{{ switchCondition }}</span> {{switchCondtion}} - this is how we interpolate a property</p>
+<p><span ngNonBindable>{{ switchCondition }}</span> {{switchCondition}} - this is how we interpolate a property</p>
+<!-- 
+<app-feb5 (giveOutput)="receiveOutput($event)"></app-feb5>
+<app-feb5 (giveOutput)="receiveOutput1($event)"></app-feb5> -->
+
+<p>Feb 2 ending</p>

@@ -29,3 +29,10 @@
 <div style="border: 1px solid gray; padding: 5px; margin: 5px">
   <feb2></feb2>
 </div>
+
+<div style="border: 1px solid gray; padding: 5px; margin: 5px">
+  <div>
+    <!-- <input type="text" [(ngModel)]="nameInHeader"> -->
+  </div>
+  <app-feb5 [name]="nameInHeader" (giveOutput)="receiveOutput($event)" (giveOutput)="receiveOutput1($event)"></app-feb5>
+</div>

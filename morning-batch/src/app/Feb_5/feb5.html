@@ -1,0 +1,55 @@
+<!-- <p>This is template for feb 5 component</p>
+<h1>H1 from feb 5</h1>
+<div>
+    <span>Span inside div iin feb 5</span>
+</div>
+
+<div>
+    <p (click)="testTrigger()">Received name is : {{myname}}<span (click)="testTrigger()">Click</span></p>
+</div>
+
+<div>
+    <input type="text" #outputText placeholder="Output text">
+    <button (click)="sendOutput(outputText.value)">Output</button>
+</div> -->
+
+<div class="row">
+    <div class="col-md-12">
+        <form #myform="ngForm" (ngSubmit)="myform.valid && getform()">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="name">Name: </label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="name" [(ngModel)]="name" #myname="ngModel" minlength="5" maxlength="10" name="name" required>
+                        <!-- <pre>
+                            {{myname.errors | json}}
+                        </pre> -->
+                        <p *ngIf="myname.errors">
+                            <small *ngIf="myname.errors.required && myname.touched">This is required</small>
+                            <small *ngIf="myname.errors.minlength && myname.dirty">Minimum 5 characters required</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="email">Email: </label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="email" class="form-control" id="email" [(ngModel)]="email" #myemail="ngModel" name="email" pattern="[a-z]{0,10}" required>
+                        <p *ngIf="myemail.errors">
+                            <small *ngIf="myemail.errors.pattern && myemail.dirty">Maximum 10 characters allowed</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button>Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>
