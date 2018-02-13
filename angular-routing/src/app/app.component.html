@@ -1,0 +1,16 @@
+<p>This is app component</p>
+
+<button (click)="route('home')">Home</button>
+<button routerLinkActive="abc" routerLink="about">About</button>
+<button routerLinkActive="abc" routerLink="contact">Contact</button>
+<button routerLinkActive="active" routerLink="home/page1">Page 1</button>
+<button routerLinkActive="active" routerLink="home/page2">Page 2</button>
+<button routerLinkActive="active" routerLink="about/3">Page 3</button>
+
+<!-- <app-home></app-home> -->
+
+<!-- <app-about></app-about> -->
+
+<div style="border: 10px solid black; padding: 10px">
+  <router-outlet></router-outlet>
+</div>
