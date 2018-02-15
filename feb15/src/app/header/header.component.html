@@ -1,0 +1,45 @@
+<p>
+  header works!
+</p>
+<!-- <button (click)="print()">Print from header</button>
+<button (click)="change('header')">Change from header</button> -->
+
+<p>
+  Today's date : {{mydate | date:'yyyy'}}
+</p>
+<p>
+  <!-- {{minimum digits before decimal}} . {{minimum digits after decimal}} - {{maximum digits after decimal}} -->
+  My number: {{mynumber | number:'10.8-10'}}
+</p>
+
+<p>
+  My currency: {{mynumber | currency:'INR':'symbol':'5.0-1'}}
+</p>
+
+<p>
+  My string : {{str}}
+</p>
+<button (click)="type == 'even'? type = 'odd' : type = 'even'">Toggle</button>
+<div>
+  <!-- <input type="text" [(ngModel)]="query" placeholder="search by name"> -->
+</div>
+<button (click)="color = 'red'">Red</button>
+<button (click)="color = 'green'">Green</button>
+<button (click)="color = 'yellow'">Yellow</button>
+<button (click)="color = 'blue'">Blue</button>
+<div>
+  <table>
+    <tr>
+      <th [myhighlight]="color" (direoutput)="printthis($event)">Name</th>
+      <th>Marks</th>
+    </tr>
+    <tr *ngFor="let student of myarray | custom:query">
+      <td>
+        {{student.name}}
+      </td>
+      <td>
+        {{student.marks}}
+      </td>
+    </tr>
+  </table>
+</div>
